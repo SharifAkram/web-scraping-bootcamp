@@ -1,0 +1,59 @@
+<style>
+/*    p {
+    color: red;
+    text-transform: uppercase;
+}
+*/
+#title {
+    display: none;
+}
+
+.bordered {
+    border: 2px solid orange;
+}
+
+.pink {
+    color: pink;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+#btn {
+    background-color: #fff;
+    padding: 10px;
+}
+</style>
+<div>
+    <h1 id="title">This is a large heading</h1>
+    <p style="color: red; text-transform: uppercase;">followed by a paragraph</p>
+</div>
+<a href="https://www.google.com" target="_blank">Visit Google</a>
+<button id="btn">Hide Link</button>
+<div class="bordered pink">something</div>
+<div class="bordered">something</div>
+<div class="bordered underlined">something else</div>
+<article author="sharif" class="pink">something</article>
+<sharif>something</sharif>
+
+<script>
+const link = document.getElementsByTagName("a")[0]
+const btn = document.getElementById("btn")
+
+const hideLink = () => {
+    link.style.display = "none";
+}
+
+const toggleLink = () => {
+    if (link.style.display === "none") {
+        link.style.display = "inline";
+        btn.textContent = "Hide Link";
+    }   else {
+        link.style.display = "none";
+        btn.textContent = "Show Link";
+    }
+}
+
+btn.addEventListener("click", toggleLink)
+</script>
