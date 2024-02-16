@@ -6,8 +6,6 @@ from bs4.element import NavigableString
 
 resp = r.get("https://books.toscrape.com/")
 
-resp.content
-
 soup = BeautifulSoup(resp.content, "html.parser")  # lxml
 
 # print(soup.ul)
