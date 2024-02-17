@@ -3,7 +3,8 @@
 
 import requests as r
 from bs4 import BeautifulSoup
-import pprint
+
+# import pprint
 
 
 resp = r.get("https://books.toscrape.com/")

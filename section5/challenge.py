@@ -1,9 +1,8 @@
 import requests as r
 from bs4 import BeautifulSoup
 import re
-from random import choice
-import pprint
 
+# import pprint
 
 resp = r.get("https://books.toscrape.com/")
 soup = BeautifulSoup(resp.content, "lxml")
@@ -68,4 +67,4 @@ book_tags = soup.find_all("article", attrs={"class": "product_pod"})
 
 book_data = [extract_book_data(book_tag) for book_tag in book_tags]
 
-pprint.pprint(book_data)
+print(book_data)
